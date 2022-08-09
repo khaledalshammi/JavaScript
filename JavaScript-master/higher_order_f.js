@@ -1,35 +1,13 @@
 /*
-  Higher Order Functions
-  ---> is a function that accepts functions as parameters and/or returns a function.
+let myNums = [1, 2, 3, 4, 5, 6];
 
-  - Map
-  --- method creates a new array
-  --- populated with the results of calling a provided function on every element
-  --- in the calling array.
+let newArray = [];
 
-  Syntax map(callBackFunction(Element, Index, Array) { }, thisArg)
-  - Element => The current element being processed in the array.
-  - Index => The index of the current element being processed in the array.
-  - Array => The Current Array
+for (let i = 0; i < myNums.length; i++) {
+  newArray.push(myNums[i] + myNums[i]);
+}
 
-  Notes
-  - Map Return A New Array
-
-  Examples
-  - Anonymous Function
-  - Named Function
-
-*/
-
-// let myNums = [1, 2, 3, 4, 5, 6];
-
-// let newArray = [];
-
-// for (let i = 0; i < myNums.length; i++) {
-//   newArray.push(myNums[i] + myNums[i]);
-// }
-
-// console.log(newArray);
+console.log(newArray);
 
 // Same Idea With Map
 
@@ -45,45 +23,11 @@
 
 // console.log(addSelf);
 
-// function addition(ele) {
-//   return ele + ele;
-// }
+function addition(ele) {
+  return ele + ele;
+}
 
-// let add = myNums.map(addition);
+let add = myNums.map(addition);
 
-// console.log(add);
-// let swappingCases = "khALed";
-// let invertedNumbers = [1, -10, -20, 15, 100, -30];
-// let ignoreNumbers = "Elz123er4o";
-
-// let sw = swappingCases
-//   .split("")
-//   .map(function (ele) {
-//     // Condition ? True : False
-//     return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
-//   })
-//   .join("");
-
-// Arrow Function Version
-
-// let sw = swappingCases
-//   .split("")
-//   .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
-//   .join("");
-
-// console.log(sw);
-
-// let inv = invertedNumbers.map(function (ele) {
-//   return -ele;
-// });
-
-// console.log(inv);
-
-// let ign = ignoreNumbers
-//   .split("")
-//   .map(function (ele) {
-//     return isNaN(parseInt(ele)) ? ele : "";
-//   })
-//   .join("");
-
-// console.log(ign);
+console.log(add);
+*/
